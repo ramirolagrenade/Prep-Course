@@ -43,11 +43,11 @@ function saludo(idioma) {
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
   // Tu código:
   if (idioma==="aleman")
-    return "Guten Tag";
+    return "Guten Tag!";
   else if (idioma==="mandarin")
-    return "Ni Hao";
+    return "Ni Hao!";
   else if (idioma==="ingles")
-    return "Hello";
+    return "Hello!";
   else
     return "Hola!";
 }
@@ -100,7 +100,12 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
-  
+  var x;
+  x=numero - math.floor(numero);
+  if (x===o)
+    return true;
+  else 
+    return false;
 }
 
 function fizzBuzz(numero) {
@@ -108,6 +113,12 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
+  if (numero%3===0)
+    return "fizz";
+  else if (numero%5===0)
+    return "buzz";
+  else if ((numero%3==0)&&(numero%5==0))
+    return "fizzbuzz";
 }
 
 function operadoresLogicos(num1, num2, num3) {
@@ -117,6 +128,20 @@ function operadoresLogicos(num1, num2, num3) {
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
+  if ((num1>num2)&&(num1>num3)&&(num1>0)){
+    return "Número 1 es mayor y positivo";
+  }
+  else if ((num1<0)&&(num2<0)&&(num3<0)){
+    return "Hay negativos";
+  }
+  else if((num3>num1)&&(num3>num2)){
+    num3++;
+    return num3;
+  }
+  else if ((num1===0)||(num2===0)||(num3===0))
+    return "Error";  
+  else 
+    return false;
 }
 
 function esPrimo(numero) {
@@ -125,13 +150,25 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
+  var y=1;
+  for (x=2;x<numero;x++){
+    if (numero%x==0)
+      y=0
+  }
+  if (y==1)
+    return "true";
+  else 
+    return "falso";
 }
 
 function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
-
+  if (valor==true)
+    return "Soy verdadero";
+  else if (valor==false)
+    return "Soy falso";
 }
 
 function tablaDelSeis(){
