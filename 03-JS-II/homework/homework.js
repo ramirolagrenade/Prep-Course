@@ -61,13 +61,13 @@ function colors(color) {
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
   if(color==="blue")
-    return "This is blue";
+    return "This is "+ color;
   else if(color==="red")
-    return "This is red";
+    return "This is "+ color;
   else if(color==="green")
-    return "This is green";
+    return "This is "+ color;
   else if(color==="orage")
-    return "This is orange";
+    return "This is "+ color;
   else
     return "Color not found";
 }
@@ -86,7 +86,7 @@ function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
-  if ((numero<50)&&(numrto>20))
+  if ((numero<50)&&(numerto>20))
     return true;
   else 
     return false;
@@ -100,9 +100,8 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
-  var x;
-  x=numero - math.floor(numero);
-  if (x===o)
+  numero-=math.floor(numero);
+  if (numero===o)
     return true;
   else 
     return false;
@@ -117,8 +116,10 @@ function fizzBuzz(numero) {
     return "fizz";
   else if (numero%5===0)
     return "buzz";
-  else if ((numero%3==0)&&(numero%5==0))
+  else if ( (numero%3==0) && (numero%5==0) )
     return "fizzbuzz";
+  else 
+    return numero;
 }
 
 function operadoresLogicos(num1, num2, num3) {
@@ -138,7 +139,7 @@ function operadoresLogicos(num1, num2, num3) {
     num3++;
     return num3;
   }
-  else if ((num1===0)||(num2===0)||(num3===0))
+  else if ( (num1==0) || (num2==0) || (num3==0) )
     return "Error";  
   else 
     return false;
@@ -175,7 +176,7 @@ function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-  return ["0","6","12","18","24","30","36","42","48","54","60"];
+  return [0,6,12,18,24,30,36,42,48,54,60];
 }
 
 function tieneTresDigitos(numero){
