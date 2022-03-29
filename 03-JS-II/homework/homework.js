@@ -69,7 +69,7 @@ function colors(color) {
     return "This is green";
   case "orage":
     return "This is orange";
-  default
+  default:
     return "Color not found";
   }
 }
@@ -151,8 +151,8 @@ function esPrimo(numero) {
   // Nota: Los números 0 y 1 NO son considerados números primos
   if( numero < 2) return false;
   if(numero === 2) return true;
-  for(var i = 2; i < numero; i++) {
-    if(numero % i === 0) {
+  for(var x = 2; x < numero; x++) {
+    if(numero % x === 0) {
       return false;
     }
   }
@@ -189,14 +189,14 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
-  var a = numero;
-  var i = 0;
+  var x = numero;
+  var y = 0;
   do {
-    i = i + 1;
-    a = a + 5;
+    y = y + 1;
+    x = x + 5;
   }
-  while(i < 8);
-  return a;
+  while(y < 8);
+  return x;
 }
 
 
