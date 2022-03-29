@@ -61,13 +61,13 @@ function colors(color) {
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
   switch(color){
-  case"blue"
+  case"blue":
     return "This is blue";
-  case "red"
+  case"red":
     return "This is red";
-  case "green"
+  case"green":
     return "This is green";
-  case "orage"
+  case "orage":
     return "This is orange";
   default
     return "Color not found";
@@ -157,7 +157,6 @@ function esPrimo(numero) {
     }
   }
   return true;
-}
 }
 
 function esVerdadero(valor){
