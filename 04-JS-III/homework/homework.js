@@ -160,9 +160,9 @@ function empiezaConNueve(n) {
   //Escribe tu código aquí
   let num = n.toString()
   if(num.charAt(0) === "9"){
-    return true;
+    return true
   }
-  return false;
+  return false
 }
 
 
