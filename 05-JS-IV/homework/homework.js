@@ -38,9 +38,8 @@ function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
-  var respuesta = 0;
-  respuesta = objetoMisterioso*5 ;
-  return respuesta;
+  var result = objetoMisterioso.numeroMisterioso * 5;
+  return result;
 }
 
 function eliminarPropiedad(objeto, unaPropiedad) {
@@ -56,7 +55,7 @@ function nuevoUsuario(nombre, email, password) {
   // Crea un nuevo objeto con las propiedades coincidiendo con los argumentos que se pasan a la función
   // Devuelve el objeto
   // Tu código:
-  var usuario={
+  var objeto ={
     nombre: nombre,
     email: email,
     password: password,
@@ -135,9 +134,9 @@ function sumarLikesDeUsuario(usuario) {
   // Suma todos los likes de todos los objetos "post"
   // Devuelve la suma
   // Tu código:
-  var suma=0;
-  for(var i=0;i<usuario.posts.lenght;i++){
-      suma+=usuario.posts[i].likes;
+  var suma = 0;
+  for(var i = 0; i < usuario.posts.length; i++) {
+    suma = suma + usuario.posts[i].likes;
   }
   return suma;
 }
