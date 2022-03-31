@@ -31,15 +31,15 @@ function invocarMetodo(objeto, metodo) {
   // Invoca ese método
   // Nada necesita ser devuelto ("returned")
   // Tu código:
- objeto[metodo];
+  objeto[metodo]();
 }
 
 function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
-  var respuesta;
-  respuesta= objetoMisterioso*5;
+  var respuesta = 0;
+  respuesta = objetoMisterioso*5 ;
   return respuesta;
 }
 
@@ -112,7 +112,7 @@ function agregarAmigo(usuario, nuevoAmigo) {
   // Agrega "nuevoAmigo" al final de ese array
   // Devuelve el objeto "usuario"
   // // Tu código:
-  amigos.push(nuevoAmigo);
+  usuario.amigos.push(nuevoAmigo);
   return usuario;
 }
 
@@ -137,7 +137,7 @@ function sumarLikesDeUsuario(usuario) {
   // Tu código:
   var suma=0;
   for(var i=0;i<usuario.posts.lenght;i++){
-      suma+=usuario.posts[i].like;
+      suma+=usuario.posts[i].likes;
   }
   return suma;
 }
