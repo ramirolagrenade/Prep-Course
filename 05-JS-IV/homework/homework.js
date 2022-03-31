@@ -22,8 +22,7 @@ function agregarPropiedad(objeto, property) {
   // Devuelve el objeto
   // NOTA: El nombre de la propiedad no es "propiedad", el nombre es el valor del argumento llamado "property" (una cadena/string)
   // Tu código:
-  var objeto[property];
-  objeto=null;
+  objeto[property]=null;
   return objeto;
 }
 
@@ -58,9 +57,9 @@ function nuevoUsuario(nombre, email, password) {
   // Devuelve el objeto
   // Tu código:
   var usuario={
-    nombre=nombre,
-    email=email,
-    password=password,
+    nombre: nombre,
+    email: email,
+    password: password,
   };
   return objeto;
 }
