@@ -103,8 +103,9 @@ function numeroMasGrande(numeros) {
   // Tu código:
   var max=numeros[0];
   for(var i=1;i<numeros.length;i++){
-    if (max>numeros[i])
+    if (numeros[i]>max){
       max=numeros[i];
+    }
   }
   return max;
 }
