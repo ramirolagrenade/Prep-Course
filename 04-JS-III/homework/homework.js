@@ -82,7 +82,7 @@ function agregarNumeros(numeros) {
   // Suma todos los enteros y devuelve el valor
   // Tu código:
   var x=0;
-  for(var i=0;i>numeros.length;i++){
+  for(var i=0;i<numeros.length;i++){
       x=x + numeros[i];
   }
   return x;
@@ -102,8 +102,8 @@ function numeroMasGrande(numeros) {
   // Devuelve el número más grande
   // Tu código:
   var max=numeros[0];
-  for(var i=1;i>numeros.length;i++){
-    if (max<numeros[i])
+  for(var i=1;i<numeros.length;i++){
+    if (max>numeros[i])
       max=numeros[i];
   }
   return max;
@@ -167,12 +167,12 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
-  for (var i=1;i<todosIguales.length;i++)
-    if (arreglo[0]!==arreglo[i]){
-      return false;
+  for (var i =0 ; i < arreglo.length - 1; i++) {
+    if(arreglo[i] !== arreglo[i+1]){
+      return false
     }
-    else 
-      return true;
+  }
+  return true
 } 
 
 
