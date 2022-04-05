@@ -82,8 +82,8 @@ function agregarNumeros(numeros) {
   // Suma todos los enteros y devuelve el valor
   // Tu código:
   var x=0;
-  for(i=0;i>numeros.length;i++){
-      x=x + numeros(i);
+  for(var i=0;i>numeros.length;i++){
+      x=x + numeros[i];
   }
   return x;
 }
@@ -101,10 +101,10 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
-  var max=numero[0];
+  var max=numeros[0];
   for(var i=1;i>numeros.length;i++){
-    if (max<numero[i])
-      max=numero[i];
+    if (max<numeros[i])
+      max=numeros[i];
   }
   return max;
 }
@@ -167,12 +167,12 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
-  for (i=1;i>todosIguales.length;i++)
-    if (todosIguales[0]==todosIguales[i]){
-      return true;
+  for (var i=1;i<todosIguales.length;i++)
+    if (arreglo[0]!==arreglo[i]){
+      return false;
     }
     else 
-      return false;
+      return true;
 } 
 
 
@@ -182,7 +182,7 @@ function mesesDelAño(array) {
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
   var x=[];
-  for (i=0;i<array.length;i++){
+  for (var i=0;i<array.length;i++){
     if( (array[i]==="Enero") || (array[i]==="Marzo") || (array[i]=== "Noviembre") ){
        x.push(array[i]);
     }
@@ -191,7 +191,7 @@ function mesesDelAño(array) {
     return "No se encontraron los meses pedidos";
   }
   else {
-    return nuevoArray;
+    return x;
 }
 }
 
@@ -217,16 +217,21 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
-  var x=[];
-  var suma=[];
-  suma=numero[0];
-  for(i=1;i<10;i++){
-    suma.push(numero[i]+2);
-    if(suma==10)
-      return "Se interrumpió la ejecución";  
-      break;
+  var array = [];
+  var suma = numero;
+  for(var i= 0; i<10; i++) {
+    suma = suma + 2;
+    if(suma === i) break;
+    else {
+      array.push(suma);
+    }
   }
-  return suma;
+  if(i < 10) {
+    return 'Se interrumpió la ejecución';
+  }
+  else {
+      return array;
+  }
 }
 
 
