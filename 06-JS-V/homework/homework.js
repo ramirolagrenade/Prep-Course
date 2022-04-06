@@ -9,13 +9,13 @@ function crearUsuario() {
   // Devuelve la clase
   // Tu código:
   function Usuario(opciones){
-      this.Usuario=opciones.Usuario;
-      this.nombre=opciones.nombre;
-      this.email=opciones.email;
-      this.password=opciones.password;
+      this.Usuario = opciones.Usuario;
+      this.nombre = opciones.nombre;
+      this.email = opciones.email;
+      this.password = opciones.password;
   }
   Usuario.prototype.saludar=function() {
-    return "hola, mi nombre es "+ this.nombre;
+    return "Hola, mi nombre es "+ this.nombre;
   }
 }
 
@@ -36,10 +36,10 @@ function agregarStringInvertida() {
   // Ej: 'menem'.reverse() => menem
   // 'toni'.reverse() => 'inot'
   // Pista: Necesitarás usar "this" dentro de "reverse"
-  String.prototype.reverse=function(){
-    var StringInvertida;
-    for (var i=this.length-1;i>=0;i--){
-      StringInvertida= StringInvertida + this.charAt(i);
+  String.prototype.reverse = function(){
+    var StringInvertida = "";
+    for (var i = this.length - 1 ; i >= 0 ; i--){
+      StringInvertida = StringInvertida + this.charAt(i);
     }
     return StringInvertida;
   };
@@ -59,16 +59,16 @@ function agregarStringInvertida() {
   class Persona {
     constructor(/*Escribir los argumentos que recibe el constructor*/) {
       // Crea el constructor:
-    this.nombre=nombre;
-    this.apellido=apellido;
-    this.edad=edad;
-    this.domicilio=domicilio;
-    this.detalle=function(){
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.edad = edad;
+    this.domicilio = domicilio;
+    this.detalle = function(){
       return{
-        nombre:this.nombre,
-        apellido:this.apellido,
-        edad:this.edad,
-        domicilio:this.domicilio
+        Nombre: this.nombre,
+        Apellido: this.apellido,
+        Edad: this.edad,
+        Domicilio: this.domicilio
       }
     }
     }
@@ -78,7 +78,7 @@ function crearInstanciaPersona(nombre, apellido, edad, dir) {
   //Con esta función vamos a crear una nueva persona a partir de nuestro constructor de persona (creado en el ejercicio anterior)
   //Recibirá los valores "Juan", "Perez", 22, "Saavedra 123" para sus respectivas propiedades
   //Devolver la nueva persona creada
-  var persona= new Persona(nombre, apellido, edad, dir);
+  const persona= new Persona(nombre, apellido, edad, dir);
   return persona;
 }
   
