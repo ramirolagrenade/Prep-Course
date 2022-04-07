@@ -47,7 +47,7 @@ function map(array, cb) {
   //Tu código:
   var nuevoarray=[];
   for(var i=0; i<array.length;i++){
-    nuevoarray.push(cd(array[i]));
+    nuevoarray.push(cb(array[i]));
     nuevoarray[i]=cb(array[i]);
   }
 }
