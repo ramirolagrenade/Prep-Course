@@ -35,7 +35,7 @@ function forEach(array, cb) {
   // Itera sobre la matriz "array" y pasa los valores al callback uno por uno
   // Pista: Estarás invocando a `cb` varias veces (una por cada valor en la matriz)
   //Tu código:
-  for(var i=0; i < array.lenght ;i++){
+  for(var i = 0; i < array.length ; i++){
     cb(array[i]);
   }
 }
@@ -46,7 +46,7 @@ function map(array, cb) {
   // El nuevo array debe tener la misma longitud que el array del argumento
   //Tu código:
   var nuevoarray=[];
-  for(var i=0; i<array.lenght;i++){
+  for(var i=0; i<array.length;i++){
     nuevoarray.push(cd(array[i]));
     nuevoarray[i]=cb(array[i]);
   }
@@ -57,7 +57,7 @@ function filter(array) {
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
   var nuevoarray=[];
-  for(var i=0; i<array.lenght;i++){
+  for(var i=0;  i < array.length ; i++){
     if(array[i][0] === "a"){
       nuevoarray.push(array[i]);
     }
